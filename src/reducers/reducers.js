@@ -58,7 +58,7 @@ const reminders = (state = [], action) => {
         if (Services.length == 0) {
             const ServiceData = async () => {
                 try {
-                    const { data } = await axios.get('http://localhost:5000/Services')
+                    const { data } = await axios.get('https://realluxs.onrender.com/Services')
 
                     setServices(data.data)
 
