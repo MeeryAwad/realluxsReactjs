@@ -28,7 +28,7 @@ const ContactUs = () => {
                 <section className="contact-page-sec">
                     <div className="section-head col-sm-12">
                         <h4><span>{arraylang[5].Contact}</span>{arraylang[5].us} </h4>
-                        <p>{arraylang[5].Contact_US_Cont}</p>
+                        <p style={{width:"90%"}}>{arraylang[5].Contact_US_Cont}</p>
                     </div>
                     <div className="container">
                         <div className="row">

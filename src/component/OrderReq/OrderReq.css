@@ -173,7 +173,7 @@
 .OrderReq main .checkout-details .checkout-details-inner .checkout-total {
   display: flex;
   font-size: 16px;
-  padding: 5px 0px;
+  padding: 5px;
   border-top: 1px solid #BDBDBD;
   justify-content: space-between;
 }
