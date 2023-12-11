@@ -28,7 +28,7 @@ const Footer = () => {
                 <footer>
                     <div className="row">
 
-                        <div className="column">
+                        <div className="column ">
                             <h4>{arraylang[1].About_Us}</h4>
                             <p>
                                 {arraylang[1].AboutUsCont}

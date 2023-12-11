@@ -195,11 +195,11 @@ const ContactUs = () => {
                         </div>
 
                     </div>
-                    <Footer />
+                  
                 </section>
-
+                <Footer />
             </div>
-
+        
 
         </div>
 
