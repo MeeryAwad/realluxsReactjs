@@ -1,0 +1,234 @@
+.HomePage {
+  z-index: 0;
+  margin-top: 145px;
+  position: absolute;
+  width: 100%;
+}
+
+.HomePage .beforLoading {
+  width: 100vw;
+  height: 80vh;
+  z-index: 0;
+}
+
+.HomePage .wrapper2 {
+  margin: 0px auto;
+  width: 100%;
+  flex-direction: column;
+}
+
+.HomePage .fa-trash {
+  margin-left: 48%;
+  margin-right: 48%;
+}
+
+.loader-demo-box {
+  border-radius: 0.25rem !important;
+}
+
+.loader-demo-box {
+  width: 100%;
+  height: 200px;
+}
+
+.jumping-dots-loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 200px 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.jumping-dots-loader span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #2850a8;
+  margin: 35px 5px;
+}
+
+.jumping-dots-loader span:nth-child(1) {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.jumping-dots-loader span:nth-child(2) {
+  animation: bounce 1s ease-in-out 0.33s infinite;
+}
+
+.jumping-dots-loader span:nth-child(3) {
+  animation: bounce 1s ease-in-out 0.66s infinite;
+}
+
+@keyframes bounce {
+  0%, 75%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+}
+.dropdown {
+  width: 100vw;
+  padding: 10px 10%;
+  background-color: rgb(233, 233, 233);
+  filter: url(#goo);
+}
+.dropdown #goo {
+  position: absolute;
+}
+.dropdown__face, .dropdown__items {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+}
+.dropdown__face {
+  display: block;
+  position: relative;
+  padding-left: 48px;
+  padding-right: 48px;
+  border-radius: 25px;
+  color: #333;
+}
+.dropdown__items {
+  margin: 10px;
+  right: 0;
+  width: 50%;
+  list-style: none;
+  list-style-type: none;
+  display: block;
+  justify-content: space-between;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+  color: #888;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.dropdown__items::before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  bottom: 100%;
+  right: 20%;
+  height: 20px;
+  width: 20px;
+}
+.dropdown__arrow {
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg) translateY(-50%);
+  transform-origin: right;
+}
+.dropdown__item {
+  margin-top: 5px;
+  padding: 5px;
+}
+.dropdown input {
+  display: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.dropdown input:checked ~ .dropdown__items {
+  top: calc(100% + 25px);
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown .fas {
+  position: absolute;
+  margin-left: -30px;
+  margin-right: -30px;
+  color: #f5bc59;
+}
+
+svg {
+  display: none;
+}
+
+.HomePage .Details {
+  display: flex;
+  margin-top: 14px;
+}
+
+.HomePage .depItem {
+  font-size: 17px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: #666565;
+}
+
+.HomePage .dropdown__text {
+  font-size: 20px;
+  margin-right: 25px;
+}
+
+.HomePage .supText {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.HomePage .depItem {
+  display: flex;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+
+.HomePage .depItem.info {
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.HomePage .depItem .info,
+.HomePage .depItem .location {
+  text-decoration: underline;
+}
+
+.HomePage .depItem .fa {
+  color: #2850a8;
+  margin-right: 3px;
+}
+
+.HomePage .fa-car-side {
+  margin-top: 6px;
+  margin-left: -24px;
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 1300px) {
+  .HomePage {
+    margin-top: 156px;
+  }
+}
+@media screen and (max-width: 1022px) {
+  .HomePage {
+    margin-top: 68px;
+  }
+}
+.dropdown__face {
+  width: 90%;
+  border: 1px solid #f5bc59;
+  z-index: 2;
+  margin: auto;
+  box-shadow: 2px 2px 2px 2px #d8d7d7;
+}
+
+.dropdown__items {
+  background-color: #f5bc59;
+  z-index: 2;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.dropdown__item {
+  z-index: 2;
+}/*# sourceMappingURL=HomePage.css.map */

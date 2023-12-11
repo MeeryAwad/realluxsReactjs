@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap");
+@import '../../../style/style.scss';
+
+
+.CarInformation {
+  position: absolute;
+  margin-top: $height - 15;
+  margin-bottom: 0;
+ 
+  
+
+}
+.col-md-12{
+padding-bottom: 20px;
+margin-bottom: 0;
+
+}
+.road-map-main {
+
+  width: 80%;
+  margin: auto;
+
+
+  .road-map-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 175px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 25px;
+      height: auto;
+      display: block;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      clear: both;
+      display: block;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      clear: both;
+      display: block;
+    }
+
+    .road-map-circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 25px solid transparent;
+      border-top-color: $SecondColor;
+      border-right-color: $SecondColor;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transform: rotate(45deg);
+
+      @media (max-width: 992px) {
+        position: unset;
+        border: 25px solid $SecondColor;
+      }
+
+      .road-map-circle-text {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background-color: $firstColor;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+        text-transform: capitalize;
+        color: #fff;
+        box-shadow: 0px 0px 10px 5px #00000021;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+        padding-top: 4vh;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .road-map-card {
+      width: 35%;
+      // float: right;
+      background: #f7c673;
+      padding: 20px 20px;
+      z-index: 1;
+      position: absolute;
+      right: 0;
+      border-radius: 5px;
+
+      &::before {
+        content: "";
+        width: 25%;
+        height: 20px;
+        background: $SecondColor;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -23%;
+        right: -23%;
+        z-index: -1;
+      }
+
+      @media (max-width: 991px) {
+        width: 100%;
+        margin-top: 30px;
+        position: unset;
+
+        &::before {
+          content: "";
+          width: 20px;
+          height: 30%;
+          top: 50%;
+          transform: translateX(-50%);
+          left: 50%;
+          right: 50%;
+        }
+      }
+
+      @media (max-width: 425px) {
+        top: 45%;
+      }
+
+      .card-head {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin: 0 0 15px;
+        color: #fff;
+      }
+
+      .card-text {
+        color: #888;
+        margin: 0;
+        display: -webkit-box;
+
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        @media (max-width: 1199px) {
+          -webkit-line-clamp: 4;
+        }
+      }
+    }
+
+    &:nth-of-type(even) {
+      .road-map-circle {
+        border-bottom-color: $SecondColor;
+        border-left-color: $SecondColor;
+        border-top-color: transparent;
+        border-right-color: transparent;
+
+        @media (max-width: 991px) {
+          border-color: $SecondColor;
+        }
+      }
+
+      .road-map-card {
+        // float: left;
+        left: 0;
+        right: 0;
+
+        &::before {
+          right: -23%;
+          left: unset;
+
+          @media (max-width: 991px) {
+            content: "";
+            width: 20px;
+            height: 30%;
+            top: 50%;
+            transform: translateX(-50%);
+            left: 50%;
+            right: 50%;
+          }
+
+          @media (max-width: 425px) {
+            top: 45%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.CarInformation .road-map-main .fa {
+  font-size: 30px;
+  margin-top: -3.5vh;
+}
+
+.CarInformation h6 {
+  font-size: 40px;
+}
+
+.CarInformation {
+  background-color: #ebe7e7;
+  width: 100%;
+  height: max-content;
+ 
+  padding-top: 7vh;
+
+}
+
+.carNum {
+  text-align: left;
+  font-size: 3em;
+  margin-top: -3vh;
+
+}
+
+.dataText {
+  color: #fff;
+  background-color: rgb(245, 44, 44);
+  padding: 10px;
+  width: max-content;
+  border-radius: 5px;
+
+}
+
+.CarInformation .btn {
+  margin-top: 4vh;
+  width: 40%;
+  padding: 20PX;
+  border-radius: 10px;
+  margin-left: 23vw;
+  margin-right: 23vw;
+  background-color: $firstColor;
+  color: #fff;
+  cursor: pointer;
+}
+
+.CarInformation .btn:hover {
+  border: 1px solid $firstColor;
+  background-color: #fff;
+  color: $firstColor;
+
+}
+
+.CarInformation .card-head input,
+.CarInformation .carNum input {
+  height: 30px;
+  width: 90%;
+  outline: $firstColor;
+  border-radius: 5px;
+  border: 1px solid $firstColor;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.CarInformation .carNum input {
+  width: 20%;
+}
+
+
+@media screen and (max-width:1022px) {
+
+  .CarInformation {
+    margin-top: $height - 85;
+  }
+
+  .CarInformation .carNum input {
+    width: 35%;
+  }
+}

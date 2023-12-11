@@ -1,0 +1,27 @@
+.AddProducts input {
+  height: 35px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.AddProducts label {
+  font-size: 18px;
+  color: #2850a8;
+}
+
+.AddProducts .Description {
+  height: 70px;
+  padding-top: 5px;
+  text-align: start;
+  font-size: 18px;
+}
+
+.AddProducts h1 {
+  text-align: center;
+  color: #2850a8;
+  border-bottom: 2px solid #f5bc59;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  margin-top: 10px;
+}/*# sourceMappingURL=AddProducts.css.map */
