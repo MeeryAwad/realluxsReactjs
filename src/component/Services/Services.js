@@ -6,7 +6,7 @@ import WOW from 'wowjs';
 import '../css/animate.css'
 import { useEffect } from "react";
 import Footer from "../Footer/Footer";
-import { Helmet } from 'react-helmet-async';
+import axios from "axios";
 
 
 
@@ -16,7 +16,7 @@ const Services = () => {
   // <get the data from rducers>
   const state = useSelector((state) => state.data);
 
-  const { Services } = useBetween(state.useShareState);
+  const { Services,setServices } = useBetween(state.useShareState);
 
   const state1 = useSelector((state) => state.data1);
 
@@ -27,7 +27,22 @@ const Services = () => {
     new WOW.WOW({
       live: false
     }).init();
-  }, [])
+    const ServiceData = async () => {
+      try {
+          const { data } = await axios.get('https://realluxs.onrender.com/Services')
+
+          setServices(data.data)
+         
+
+
+      }
+      catch (error) {
+          console.log(error)
+      }
+
+  }
+  ServiceData();
+  }, [Services.length])
 
 
 
