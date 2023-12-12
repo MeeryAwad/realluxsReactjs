@@ -28,7 +28,7 @@ const ContactUs = () => {
                 <section className="contact-page-sec">
                     <div className="section-head col-sm-12">
                         <h4><span>{arraylang[5].Contact}</span>{arraylang[5].us} </h4>
-                        <p style={{width:"90%"}}>{arraylang[5].Contact_US_Cont}</p>
+                        <p className="contactCont">{arraylang[5].Contact_US_Cont}</p>
                     </div>
                     <div className="container">
                         <div className="row">
@@ -197,7 +197,9 @@ const ContactUs = () => {
                     </div>
                   
                 </section>
+                <div style={{ direction: 'ltr' }}>
                 <Footer />
+                </div>
             </div>
         
 
