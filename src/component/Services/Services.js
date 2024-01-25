@@ -6,7 +6,7 @@ import WOW from 'wowjs';
 import '../css/animate.css'
 import { useEffect } from "react";
 import Footer from "../Footer/Footer";
-import axios from "axios";
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -16,7 +16,7 @@ const Services = () => {
   // <get the data from rducers>
   const state = useSelector((state) => state.data);
 
-  const { Services,setServices } = useBetween(state.useShareState);
+  const { Services } = useBetween(state.useShareState);
 
   const state1 = useSelector((state) => state.data1);
 
@@ -27,36 +27,21 @@ const Services = () => {
     new WOW.WOW({
       live: false
     }).init();
-    const ServiceData = async () => {
-      try {
-          const { data } = await axios.get('https://realluxs.onrender.com/Services')
-
-          setServices(data.data)
-         
-
-
-      }
-      catch (error) {
-          console.log(error)
-      }
-
-  }
-  ServiceData();
-  }, [Services.length])
+  }, [])
 
 
 
   var ServicesList = Services.map((item, i) => {
 
     return (
-    
-          <div className="col-lg-4 col-sm-6 wow bounceInLeft" data-wow-duration='1s'  key={item.id} >
-            <div className="item"> <span className="icon feature_box_col_one"><i className={item.icon}></i></span>
-              <h6>{lang=='en' ? item.title1 : item.title}</h6>
-              <p>{lang=='en' ? item.text1 : item.text}</p>
-            </div>
-        
-       
+
+      <div className="col-lg-4 col-sm-6 wow bounceInLeft" data-wow-duration='1s' key={item.id} >
+        <div className="item"> <span className="icon feature_box_col_one"><i className={item.icon}></i></span>
+          <h6>{lang == 'en' ? item.title1 : item.title}</h6>
+          <p>{lang == 'en' ? item.text1 : item.text}</p>
+        </div>
+
+
 
 
       </div >
@@ -68,9 +53,19 @@ const Services = () => {
 
   return (
     <>
-     
+      <Helmet>
+        <title>Real Luxs Services</title>
+        <meta name="description"
+          content="Real Luxs Services 
+          What services does Real Luxس provide?
+          خدمات ريال لوكس
+          ما هي الخدمات التي تقدمها ريال لوكس
+          "></meta>
+        <link rel="canonical" href="/Delivery Request" />
+      </Helmet>
+
       <Header style={{ zIndex: '2' }} />
-      <div className="Services" style={{ zIndex: '0' , direction : lang== 'en' ? 'ltr' : 'rtl'}} >
+      <div className="Services" style={{ zIndex: '0', direction: lang == 'en' ? 'ltr' : 'rtl' }} >
 
         <div className="feat bg-gray pt-5 pb-5">
           <div className="container">
@@ -87,10 +82,10 @@ const Services = () => {
 
         <Footer />
 
-        
+
       </div>
 
-     
+
 
     </>
 

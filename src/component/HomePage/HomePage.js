@@ -9,6 +9,7 @@ import '../Goods/goods.css';
 import axios from "axios";
 
 import CarTracker from "./Map/map.js";
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -47,13 +48,13 @@ const HomePage = () => {
 
             setCars(data.data)
             if (carId != -1)
-            setCoords((lastValue) => {
-                return {
-                    ...lastValue,
-                    lat: Cars[carId].latitude,
-                    lng: Cars[carId].longitude
-                }
-            })
+                setCoords((lastValue) => {
+                    return {
+                        ...lastValue,
+                        lat: Cars[carId].latitude,
+                        lng: Cars[carId].longitude
+                    }
+                })
 
 
         }
@@ -124,7 +125,15 @@ const HomePage = () => {
 
     return (
         <>
-
+            <Helmet>
+                <title>Home page Real Luxs</title>
+                <meta name="description"
+                    content="Tracking Cars Real Luxs UAE
+                    transportation , delivery UAE ,  Abu Dhabi, Dubai, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah.
+                    توصيل , نقل ضمن الامارات العربية المتحدة , ابو ظبي , دبي , الشارقة, عجمان , ام القيويين , رأس الخيمة , الفجيرة, 
+                   'تتبع سيارات ريال لوكس لامارات العربية المتحدة"></meta>
+                <link rel="canonical" href="/Delivery Request" />
+            </Helmet>
             <Header />
             <div className="HomePage" style={{ direction: lang == 'en' ? 'ltr' : 'rtl' }} >
 

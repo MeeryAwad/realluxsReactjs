@@ -6,6 +6,7 @@ import '../css/animate.css'
 import Footer from "../Footer/Footer";
 
 
+
 const AboutUs = () => {
 
     useEffect(() => {
@@ -17,6 +18,7 @@ const AboutUs = () => {
 
     return (
         <>
+          
             <Header />
             <div className="AboutUs" >
                 <div className="wrapper2">

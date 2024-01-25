@@ -29,7 +29,7 @@ const OrderReq = () => {
         LocationFrom: "",
         LocationTo: "",
         Details: "",
-        date:""
+        date: ""
 
 
     });
@@ -51,7 +51,7 @@ const OrderReq = () => {
         var today = new Date();
         userReqest.date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear()
 
-        if (userReqest.FullName != "" && userReqest.Phone != "" && userReqest.From != "" && userReqest.To != ""&& userReqest.LocationFrom != ""&& userReqest.LocationTo != "" && userReqest.Details != "") {
+        if (userReqest.FullName != "" && userReqest.Phone != "" && userReqest.From != "" && userReqest.To != "" && userReqest.LocationFrom != "" && userReqest.LocationTo != "" && userReqest.Details != "") {
 
             const headers = {
 
@@ -75,7 +75,7 @@ const OrderReq = () => {
                     LocationFrom: "",
                     LocationTo: "",
                     Details: "",
-                    date:""
+                    date: ""
                 }
             });
 
@@ -98,8 +98,12 @@ const OrderReq = () => {
     return (
         <>
             <Helmet>
-                <title>Real Luxs</title>
-                <meta name="description" content="Real Luxs"></meta>
+                <title>Reqest Real Luxs</title>
+                <meta name="description"
+                    content="Delivery Request Real Luxs UAE
+                    transportation , delivery UAE ,  Abu Dhabi, Dubai, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah.
+                    توصيل , نقل ضمن الامارات العربية المتحدة , ابو ظبي , دبي , الشارقة, عجمان , ام القيويين , رأس الخيمة , الفجيرة, 
+                    طلب توصيل الامارات العربية المتحدة ريال لوكس"></meta>
                 <link rel="canonical" href="/Delivery Request" />
             </Helmet>
             <Header />
@@ -116,7 +120,7 @@ const OrderReq = () => {
 
                         </header>
                         <p className="headerSub">{arraylang[2].Delivery_request_suptitle}</p>
-                        {error && <h4 style={{ color: 'rgb(226, 95, 95)' ,  direction: lang == 'en' ? 'ltr' : 'rtl' }} className="errorAndDone">*{arraylang[2].err} </h4>}
+                        {error && <h4 style={{ color: 'rgb(226, 95, 95)', direction: lang == 'en' ? 'ltr' : 'rtl' }} className="errorAndDone">*{arraylang[2].err} </h4>}
                         {successAlert == true &&
                             <div className="alert " >
                                 <div className="thank-you-wrapper">
@@ -133,7 +137,7 @@ const OrderReq = () => {
                                 </div>
                             </div>
                         }
-                        <div className='steps' id='steps'  style={{ direction: lang == 'en' ? 'ltr' : 'rtl' }}>
+                        <div className='steps' id='steps' style={{ direction: lang == 'en' ? 'ltr' : 'rtl' }}>
 
                             <section className="checkout-form">
                                 <form action="#!" method="get">
@@ -238,7 +242,7 @@ const OrderReq = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='step'  style={{ direction: lang == 'en' ? 'ltr' : 'rtl' }}>
+                                    <div className='step' style={{ direction: lang == 'en' ? 'ltr' : 'rtl' }}>
                                         <div className='number'><i className='fas fa-share'></i></div>
                                         <div className="btnSend" onClick={addNewReq}>{arraylang[2].Send}</div>
 

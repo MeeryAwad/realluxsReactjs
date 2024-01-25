@@ -6,6 +6,7 @@ import '../css/animate.css'
 import Footer from "../Footer/Footer";
 import { useSelector } from "react-redux";
 import { useBetween } from "use-between";
+import { Helmet } from 'react-helmet-async';
 
 
 const ContactUs = () => {
@@ -21,6 +22,14 @@ const ContactUs = () => {
 
     return (
         <div className="block">
+            <Helmet>
+                <title>Contact us / تواصل معنا</title>
+                <meta name="description"
+                    content=" اتصل بنا ريال لوكس
+                 تواصل معنا ريال لوكس
+                 Contact us Real Luxs"></meta>
+                <link rel="canonical" href="/ContactUs" />
+            </Helmet>
             <Header />
             <div className="ContactUs" style={{ direction: lang == 'en' ? 'rtl' : 'ltr' }}>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -28,7 +37,7 @@ const ContactUs = () => {
                 <section className="contact-page-sec">
                     <div className="section-head col-sm-12">
                         <h4><span>{arraylang[5].Contact}</span>{arraylang[5].us} </h4>
-                        <p className="contactCont">{arraylang[5].Contact_US_Cont}</p>
+                        <p>{arraylang[5].Contact_US_Cont}</p>
                     </div>
                     <div className="container">
                         <div className="row">
@@ -40,7 +49,7 @@ const ContactUs = () => {
                                         </div>
                                         <div className="contact-info-text">
                                             <h2>{arraylang[5].Address}</h2>
-                                            <span ><a href="https://maps.app.goo.gl/6uSuhTE2V5SRcT278" target="_blank" style={{textDecoration:'underline'}} >{arraylang[5].AddressCont} </a></span>
+                                            <span ><a href="https://maps.app.goo.gl/6uSuhTE2V5SRcT278" target="_blank" style={{ textDecoration: 'underline' }} >{arraylang[5].AddressCont} </a></span>
                                             <span></span>
                                         </div>
                                     </div>
@@ -69,33 +78,33 @@ const ContactUs = () => {
                                         </div>
                                         <div className="contact-info-text">
                                             <h2>{arraylang[5].Social_Media}</h2>
-                                            <div className="social-icon" style={{display:'flex'}}>
-                                             
-                                                    <span title="facebook">
-                                                        <a href="#">
-                                                            <i className='fab fa-facebook'></i>
-                                                        </a>
-                                                    </span>
-                                                    <span title="whatsapp">
-                                                        <a href="whatsapp://send?abid=+97144523635" >
-                                                            <i className='fab fa-whatsapp' title="whatsapp"></i>
+                                            <div className="social-icon" style={{ display: 'flex' }}>
 
-                                                        </a>
+                                                <span title="facebook">
+                                                    <a href="#">
+                                                        <i className='fab fa-facebook'></i>
+                                                    </a>
+                                                </span>
+                                                <span title="whatsapp">
+                                                    <a href="whatsapp://send?abid=+97144523635" >
+                                                        <i className='fab fa-whatsapp' title="whatsapp"></i>
 
-                                                    </span>
-                                                
-                                               
-                                                    <span title="instagram">
-                                                        <a href="#">
-                                                            <i className='fab fa-instagram' ></i>
-                                                        </a>
-                                                    </span>
-                                                    <span title="google">
-                                                        <a href="mailto:realluxs0@gmail.com">
-                                                            <i className='fab fa-google' ></i>
-                                                        </a>
-                                                    </span>
-                                             
+                                                    </a>
+
+                                                </span>
+
+
+                                                <span title="instagram">
+                                                    <a href="#">
+                                                        <i className='fab fa-instagram' ></i>
+                                                    </a>
+                                                </span>
+                                                <span title="google">
+                                                    <a href="mailto:realluxs0@gmail.com">
+                                                        <i className='fab fa-google' ></i>
+                                                    </a>
+                                                </span>
+
 
                                             </div>
 
@@ -195,13 +204,11 @@ const ContactUs = () => {
                         </div>
 
                     </div>
-                  
+                    <Footer />
                 </section>
-                <div style={{ direction: 'ltr' }}>
-                <Footer />
-                </div>
+
             </div>
-        
+
 
         </div>
 

@@ -68,9 +68,9 @@ const Goods = () => {
             else setNoProducts(false)
         }
     }
-   
+
     const addNewProduct = () => {
-       
+
         setGoods([...Goods, ProductInfo]);
         const headers = {
 
@@ -157,7 +157,7 @@ const Goods = () => {
         formData.append('photo', ProductInfo.photo);
         formData.append('date', ProductInfo.date);
         formData.append('_id', Goods[indexEdit]._id);
-       
+
         setGoods(proves => {
             const newState = [...proves]
 
@@ -221,6 +221,7 @@ const Goods = () => {
         const deleteProd = document.querySelector(`.product`);
 
         deleteProd.classList.add("deleteProduct");
+
         setGoods(Goods.filter(item => item !== indexDelete));
         setAlertDelete(false)
         setTimeout(() => {
@@ -255,10 +256,15 @@ const Goods = () => {
             return (
 
 
-                <span className="product wow fadeInDown" data-wow-duration='1s' id="product" key={i} style={{ textAlign: lang=='en' ? 'left' : 'right'}}>
-
+                <span className="product wow fadeInDown" data-wow-duration='1s' id="product" key={i} style={{ textAlign: lang == 'en' ? 'left' : 'right' }}>
+                    <Helmet>
+                        <title>{item.ProductType}</title>
+                        <meta name="description"
+                            content={`${item.ProductType}, ${item.text} , ${item.price}`}></meta>
+                        <link rel="canonical" href="/Delivery Request" />
+                    </Helmet>
                     <img src={img} />
-                  
+
                     <div style={{ display: 'flex' }}>
                         <div title={item.ProductType} className="h1">{item.ProductType == "" ? '-' : item.ProductType}</div>
                         {adminLogIn == true && <div className="icon">
@@ -311,13 +317,21 @@ const Goods = () => {
         GoodsData();
 
 
-    }, [Goods.length,Goods])
+    }, [Goods.length, Goods])
 
     return (
         <>
-          
+            <Helmet>
+                <title>Goods</title>
+                <meta name="description"
+                    content="The goods transported and delivered.. Riyal Luxs ,
+                    transporte , delivery UAE ,  Abu Dhabi, Dubai, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah.
+                    توصيل , شحن , نقل ضمن الامارات العربية المتحدة , ابو ظبي , دبي , الشارقة, عجمان , ام القيويين , رأس الخيمة , الفجيرة, 
+                    الاغراض التي تم نقلها و توصيلها في ريال لوكس"></meta>
+                <link rel="canonical" href="/Goods" />
+            </Helmet>
             <Header />
-            <div className="Goods" style={{ direction : lang== 'en' ? 'ltr' : 'rtl'} } >
+            <div className="Goods" style={{ direction: lang == 'en' ? 'ltr' : 'rtl' }} >
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossOrigin="anonymous" />
                 {
@@ -372,7 +386,7 @@ const Goods = () => {
                         </Button>
                         <Button variant="secondary" className="btn btn-calendar-modal-cancel"
                             onClick={emptyFile} >
-                           {arraylang[3].CloseBtn}
+                            {arraylang[3].CloseBtn}
                         </Button>
 
                     </Modal.Footer>

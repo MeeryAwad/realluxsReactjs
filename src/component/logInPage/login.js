@@ -88,7 +88,14 @@ const LogIn = () => {
 
     return (
         <>
-          
+          <Helmet>
+                <title>Log In Real Luxs</title>
+                <meta name="description"
+                    content="Log In Real Luxs ,
+                    تسجيل دخول ريال لوكس
+                    "></meta>
+                <link rel="canonical" href="/Delivery Request" />
+            </Helmet>
             <Header />
             <div className="LogInPage " style={{ zIndex: '0' }}>
                 {success &&

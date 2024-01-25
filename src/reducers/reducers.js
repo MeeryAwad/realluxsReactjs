@@ -1,5 +1,5 @@
 import axios from "axios";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -61,7 +61,6 @@ const reminders = (state = [], action) => {
                     const { data } = await axios.get('https://realluxs.onrender.com/Services')
 
                     setServices(data.data)
-                   
 
 
                 }
@@ -71,7 +70,6 @@ const reminders = (state = [], action) => {
 
             }
             ServiceData();
-          
         }
 
 

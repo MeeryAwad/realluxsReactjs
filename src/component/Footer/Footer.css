@@ -145,6 +145,11 @@ ul.social-icons li:hover i {
   word-break: break-all;
 }
 
+.Footer .contact_icon img {
+  margin-right: 8px;
+  height: 20px;
+}
+
 .Footer .gml {
   word-break: break-all;
 }
@@ -155,17 +160,4 @@ ul.social-icons li:hover i {
 
 .social-icons .socialFooter {
   margin-top: 20px;
-}
-
-@media screen and (max-width: 1022px) {
-  .Footer .row {
-    display: block;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-  }
-  .Footer .column {
-    width: 100%;
-    margin-top: 4vh;
-  }
 }/*# sourceMappingURL=Footer.css.map */

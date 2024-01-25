@@ -114,8 +114,7 @@ function CarTracker() {
                     {window.google != undefined && lat != 0 && lng != 0 && <Marker
                         position={{ lat: lat, lng: lng }}
                         icon={{
-                            url: carData == null ? "https://th.bing.com/th/id/R.e985b822d867f21b3fd20ae7a81f6760?rik=7skCTFPOg%2bPcvw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fyou-are-here-png-hd-you-are-here-icon-512.png&ehk=tX1wHMSFZz6JetilMl7x8nJuDDhxYUtrCSYFV1uY%2fTs%3d&risl=&pid=ImgRaw&r=0" :
-                             "https://th.bing.com/th/id/R.cc2bd55293d435acced2b6d05c74ef3f?rik=JHWHaTvcJsOZag&riu=http%3a%2f%2fmonksdrycleaning.co.uk%2fwp-content%2fuploads%2f2018%2f09%2fdelivery-van-icon-orange.png&ehk=o9rmOEmfyT8QX%2bG3kKVd8QysfAypqBulCP3F7PoaaGI%3d&risl=&pid=ImgRaw&r=0", // Replace with the path to your custom icon
+                            url: carData == null ? "https://th.bing.com/th/id/R.e985b822d867f21b3fd20ae7a81f6760?rik=7skCTFPOg%2bPcvw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fyou-are-here-png-hd-you-are-here-icon-512.png&ehk=tX1wHMSFZz6JetilMl7x8nJuDDhxYUtrCSYFV1uY%2fTs%3d&risl=&pid=ImgRaw&r=0" : "https://th.bing.com/th/id/R.cc2bd55293d435acced2b6d05c74ef3f?rik=JHWHaTvcJsOZag&riu=http%3a%2f%2fmonksdrycleaning.co.uk%2fwp-content%2fuploads%2f2018%2f09%2fdelivery-van-icon-orange.png&ehk=o9rmOEmfyT8QX%2bG3kKVd8QysfAypqBulCP3F7PoaaGI%3d&risl=&pid=ImgRaw&r=0", // Replace with the path to your custom icon
                             scaledSize: new window.google.maps.Size(70, 40)// Adjust the size as needed
                         }}
                     />
